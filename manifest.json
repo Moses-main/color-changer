@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Color Changer",
+  "version": "1.0",
+  "description": "Change the background color of any webpage",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon4.jpeg",
+      "48": "icon6.jpeg",
+      "128": "icon8.jpeg"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
